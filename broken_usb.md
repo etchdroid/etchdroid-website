@@ -8,7 +8,7 @@ layout: page
 
 If you just flashed your USB drive and you see one of the notifications above, your USB drive **IS NOT BROKEN**.
 
-There is litterally **no way** EtchDroid can break your USB drive.
+There is literally **no way** EtchDroid can break your USB drive.
 
 # What does that message actually mean
 
