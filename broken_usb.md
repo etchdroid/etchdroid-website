@@ -109,11 +109,12 @@ If you don't feel comfortable doing it on Windows, I suggest you do it using And
 
 ## On macOS
 
-**Note:** I don't use macOS so instructions below may not be accurate.
+Watch this tutorial on how to format a USB drive on macOS:
 
-I will be recording a video tutorial for macOS too soon.
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FgbcEl6vA4o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 1. Open the Disk utility
 1. Select your USB drive
-1. There should be an "Erase drive" button somewhere
-1. You should find an option to format it with a "FAT" file system
+1. Click on "Erase" on the top bar
+1. If it doesn't let you erase with the default settings, select "MS-DOS (FAT)" or "ExFAT" in the "Format" menu
+1. Click "Erase"
