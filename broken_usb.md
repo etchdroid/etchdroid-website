@@ -12,7 +12,7 @@ Note that there is no need to performe these operations if EtchDroid failed and 
 
 # Scary notifications
 <div style="text-align: center;">
-<img style="max-width: 100px; width: auto;" src="/assets/img/broken_usb_1.png" alt="Unsupported USB drive"> <img style="max-width: 100px; width: auto;" src="/assets/img/broken_usb_2.png" alt="Issues with USB drive">
+<img style="max-width: 250px; width: auto;" src="/assets/img/broken_usb_1.png" alt="Unsupported USB drive"> <img style="max-width: 250px; width: auto;" src="/assets/img/broken_usb_2.png" alt="Issues with USB drive">
 </div>
 
 If you just flashed your USB drive and you see one of the notifications above, your USB drive **IS NOT BROKEN**.
