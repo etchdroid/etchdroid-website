@@ -26,6 +26,10 @@ Once you're done with the image you've written you may want to format it with a 
 
 ## On Android
 
+New! Watch this YouTube video tutorial:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VBSXz9LfCbw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 1. Close EtchDroid, plug your USB drive.
 1. Tap the "Unsupported USB Drive" or "Issues with USB drive" notification.
     If it does not show up:
