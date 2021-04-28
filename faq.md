@@ -4,6 +4,28 @@ permalink: /faq/
 layout: page
 ---
 
+### App hangs after USB drive selection (Samsung with OneUI 3.0+, recent Huawei and OnePlus devices)
+
+This is a known issue, see [magnusja/libaums#293](https://github.com/magnusja/libaums/issues/293).
+
+There is no known workaround at the moment and I do not own an affected device. A potential workaround which has been reported to
+usually not work but that is still worth a shot is to *eject* the USB drive before starting EtchDroid.
+
+This can usually be done via the system notification or via Settings → Storage.
+
+Since I do not own any device from Samsung and Huawei, and the newest OnePlus phone I have is a OnePlus 3T - not affected by the issue,
+there's very little I can do about it.
+
+If you'd like to see this issue solved you can contribute to the project by:
+
+- Fixing the issue yourself, if you know a bit of Android development and you own an affected device
+- Buying me an affected device: see the [Donations](/donate) page for options
+  - I consider it common sense that, in this particular case, low-tier donations won't be very helpful since the affected devices cost 800€ or more
+- [Posting a bounty](https://www.bountysource.com/issues/96551438-does-not-work-on-samsung-s20-oneui-3-0-android-11) on the issue, volunteers 
+  on the Internet who resolve it will be rewarded with your bounty
+
+I'm considering blocklisting the affected devices on Google Play.
+
 ### My USB drive is broken, please help!
 
 It's not. Calm down and read this: [My USB drive is broken! Plz helppppp :(](/broken_usb/)
