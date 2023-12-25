@@ -8,6 +8,8 @@ title: EtchDroid
 EtchDroid is an open-source application that writes disk images to USB drives.
 <br><br>
 Use it to make a bootable operating system USB drive when your laptop is dead.
+<br><br>
+No root required, no ads, no tracking, no nonsense.
 </div>
 
 <section class="store-links">
