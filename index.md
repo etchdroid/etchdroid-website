@@ -62,11 +62,12 @@ EtchDroid saved your day, please consider donating.
 
 ### Contributing to EtchDroid
 
-A good way to contribute to the project is to translate it to your language. A
-full translation from scratch shouldn't take you more than 30 minutes.
+A good way to contribute to the project is to
+<a href="https://hosted.weblate.org/engage/etchdroid/" target="_blank" rel="noopener">translate it to your language</a>.
+A full translation from scratch shouldn't take you more than 30 minutes.
 
 <div style="text-align: center; padding-top: 30px;">
-<a href="https://hosted.weblate.org/engage/etchdroid/">
+<a href="https://hosted.weblate.org/engage/etchdroid/" target="_blank" rel="noopener">
 <img src="https://hosted.weblate.org/widget/etchdroid/horizontal-auto.svg" alt="Translation status" />
 </a>
 </div>
