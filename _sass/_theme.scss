@@ -1,0 +1,119 @@
+// Adapted from https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995
+
+$bg-light: #fcfdf8;
+$fg-light: #000000;
+$primary-light: #196d2b;
+$surface-variant-light: #dee5d9;
+$on-surface-variant-light: #424940;
+$icon-bg-light: $on-surface-variant-light;
+$outline-light: #72796F;
+
+$supported-green-light: #196d2b;
+$partially-supported-yellow-light: #a47f00;
+$unsupported-red-light: #ba1a1a;
+
+$bg-dark: #1a1c19;
+$fg-dark: #ffffff;
+$primary-dark: #87d98a;
+$surface-variant-dark: #424940;
+$on-surface-variant-dark: #c2c9bd;
+$icon-bg-dark: #d5e8d0;
+$outline-dark: #8C9388;
+
+$supported-green-dark: #87d98a;
+$partially-supported-yellow-dark: #e2b92c;
+$unsupported-red-dark: #ffb4ab;
+
+$themes: (
+  light: (
+    bg: $bg-light,
+    fg: $fg-light,
+    primary: $primary-light,
+    surface-variant: $surface-variant-light,
+    on-surface-variant: $on-surface-variant-light,
+    icon-bg: $icon-bg-light,
+    supported-green: $supported-green-light,
+    partially-supported-yellow: $partially-supported-yellow-light,
+    unsupported-red: $unsupported-red-light,
+    outline: $outline-light,
+    shadow-opacity: 0.5,
+  ),
+  dark: (
+    bg: $bg-dark,
+    fg: $fg-dark,
+    primary: $primary-dark,
+    surface-variant: $surface-variant-dark,
+    on-surface-variant: $on-surface-variant-dark,
+    icon-bg: $icon-bg-dark,
+    supported-green: $supported-green-dark,
+    partially-supported-yellow: $partially-supported-yellow-dark,
+    unsupported-red: $unsupported-red-dark,
+    outline: $outline-dark,
+    shadow-opacity: 1,
+  ),
+);
+
+// Shortcuts for use with t() function
+$bg: "bg";
+$fg: "fg";
+$primary: "primary";
+$surface-variant: "surface-variant";
+$on-surface-variant: "on-surface-variant";
+$icon-bg: "icon-bg";
+$supported-green: "supported-green";
+$partially-supported-yellow: "partially-supported-yellow";
+$unsupported-red: "unsupported-red";
+$outline: "outline";
+$shadow-opacity: "shadow-opacity";
+
+$theme-map: null;
+
+@mixin themed($applyToSelf: false) {
+  @each $theme, $map in $themes {
+    // Initialize an empty selector
+    $selector: null;
+
+    // Determine the selector based on where to apply the theme
+    @if $applyToSelf {
+      $selector: "&.theme--#{$theme}";
+    } @else {
+      $selector: ".theme--#{$theme} &";
+    }
+
+    // Apply the styles to the determined selector
+    #{$selector} {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@mixin dark-theme {
+  .theme--dark & {
+    $theme-map: map-get($themes, "dark") !global;
+    @content;
+    $theme-map: null !global;
+  }
+}
+
+@mixin light-theme {
+  .theme--light & {
+    $theme-map: map-get($themes, "light") !global;
+    @content;
+    $theme-map: null !global;
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}

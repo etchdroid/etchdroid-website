@@ -1,37 +1,12 @@
-<!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-        </div><!--.navbar-header-->
-
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-                {% if site.navigation %}
-                    {% for link in site.navigation %}
-                        <li>
-                            <a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
-                        <li>
-                    {% endfor %}
-                {% else %}
-                    {% for page in site.pages %}
-                        {% if page.title %}
-                            {% if page.permalink != "/" %}
-                                <li>
-                                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                                <li>
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-            </ul>
-        </div><!--#navbar-->
-    </div><!--.container-->
-
-</nav>
+<header>
+  <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+  <nav>
+    <ul>
+      {% for entry in site.nav %}
+      <li><a href="{{ entry.link }}">{{ entry.name }}</a></li>
+      {% endfor %}
+      <li class="opendyslexic"><a href="#" id="opendyslexic-toggle" title="Toggle the dyslexic-friendly font">Dyslexic?</a></li>
+      <li><a href="#" onclick="toggleTheme()"><span class="material-symbols-outlined">dark_mode</span></a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,26 +1,90 @@
 ---
-layout: page
+layout: largelogo
 permalink: /
 title: EtchDroid
 ---
 
-EtchDroid is an open-source application that helps you write images to USB drives, no root required.
+<div style="text-align: center;">
+EtchDroid is an open-source application that writes disk images to USB drives.
+<br><br>
+Use it to make a bootable operating system USB drive when your laptop is dead.
+</div>
 
-You can use it to make a bootable GNU/Linux USB drive when your laptop is dead and you're in the middle of nowhere.
+<section class="store-links">
+{% for item in site.store_links %}
+    <div class="store-link">
+        <a href="{{ item.link }}" target="_blank" rel="noopener">
+            <img src="{{ item.button }}" alt="{{ item.name }}">
+        </a>
+    </div>
+{% endfor %}
+</section>
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLaaOa8kjDExAQoxjBx6QOHNOc-vAd73nN" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section class="featured-reviews">
+{% for item in site.featured_reviews %}
+    <div class="featured-review card">
+        <p>
+            {% for i in (1..5) %}<span class="material-symbols-outlined partially-supported-yellow">star</span>{% endfor %}
+        </p>
+        <p>{{ item | markdownify }}</p>
+    </div>
+{% endfor %}
+</section>
 
-## Features
-- Supports raw disk images and most GNU/Linux distributions ISOs
-- Supports most DMG disk images (beta)
-- No root - everything is done within the bounds of the Android API
-- Free as in freedom
+#### Supported devices
 
-## Planned features:
-- Write common GNU/Linux distro in streaming from the Internet without storing it on the device
-- Support for Windows installation ISO (will likely require root)
-- Support for Unetbootin-style image flashing
+- {% include supported.html %} USB flash drives
+- {% include supported.html %} USB SD card adapters
+- {% include partially-supported.html %} USB hard drives / SSDs (some might work)
+- {% include partially-supported.html %} USB docks and hubs (they might have power issues)
+- {% include unsupported.html %} Internal SD card slot
+- {% include unsupported.html %} Optical or floppy disk drives
+- {% include unsupported.html %} Thunderbolt-only devices
 
-## Screenshots
+#### Supported disk image types
 
-[![screenshot0.png](https://s22.postimg.cc/pzx4pygy5/image.png)](https://postimg.cc/image/pzx4pygy5/) [![screenshot1.png](https://s22.postimg.cc/o845v25b1/image.png)](https://postimg.cc/image/o845v25b1/) [![screenshot2.png](https://s22.postimg.cc/cj0673m25/image.png)](https://postimg.cc/image/cj0673m25/) [![screenshot3.png](https://s22.postimg.cc/c68s0xbi5/image.png)](https://postimg.cc/image/c68s0xbi5/) [![screenshot4.png](https://s22.postimg.cc/77l9men4t/image.png)](https://postimg.cc/image/77l9men4t/) [![screenshot5.png](https://s22.postimg.cc/3nzbwlcp9/image.png)](https://postimg.cc/image/3nzbwlcp9/)
+- {% include supported.html %} Modern GNU/Linux operating system images, including Arch Linux, Ubuntu, Debian, Fedora, pop!\_OS,
+  Linux Mint, FreeBSD, BlissOS and many more
+- {% include supported.html %} Raspberry PI SD card images (but you must unzip them first!)
+- {% include unsupported.html %} Apple DMG disk images
+- {% include unsupported.html %} Official Microsoft Windows ISOs from microsoft.com
+- {% include partially-supported.html %} Community-built Windows images, made for EtchDroid (be careful: they may contain viruses!)
+- {% include partially-supported.html %} Older GNU/Linux OS images < 2010 such as Damn Small Linux and Puppy Linux
+
+### Support the project
+
+Writing and testing this app takes an incredible amount of time and effort. If
+EtchDroid saved your day, please consider donating.
+
+- Become a patron on <a href="https://www.patreon.com/depau" target="_blank" rel="noopener">Patreon</a>
+- Become a sponsor on <a href="https://github.com/sponsors/depau" target="_blank" rel="noopener">GitHub Sponsors</a>
+- More options in the <a href="{{ site.baseurl }}/donate/">donations page</a>
+
+### Contributing to EtchDroid
+
+A good way to contribute to the project is to translate it to your language.
+
+<div style="text-align: center; padding-top: 30px;">
+<a href="https://hosted.weblate.org/engage/etchdroid/">
+<img src="https://hosted.weblate.org/widget/etchdroid/horizontal-auto.svg" alt="Translation status" />
+</a>
+</div>
+
+If you're a UI/UX designer and you have some ideas on how to improve the app's
+look and feel, let me know in the
+<a href="{{ site.github }}/discussions" target="_blank" rel="noopener">discussions</a>
+section.
+
+### Free software
+
+EtchDroid is free open-source software, licensed under the
+<a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener">GNU GPLv3</a>. The source code is available on
+<a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>.
+
+Feel free to distribute builds of the app or bundle it in your custom ROM, as
+long as you don't modify it or you make the source code available.
+
+If you have special licensing needs (e.g. you want to distribute a rebranded
+version of EtchDroid or use the code in a proprietary product), you can reach
+out to me at
+<a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.

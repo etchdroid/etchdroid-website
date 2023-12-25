@@ -1,39 +1,26 @@
 ---
-title: Recover USB drive after using EtchDroid
+title: Unsupported USB drive
 permalink: /broken_usb/
-layout: page
+layout: default
 ---
 
-On this page you can learn how to make your USB drive work again for normal storage after using EtchDroid.
+After using EtchDroid, you may find that your USB drive is no longer recognized
+by your computer or Android device. This is because most operating system ISOs
+use filesystems and partition schemes that are not supported by Android or Windows.
 
-This both includes when you have successfully written an image to a USB drive and used it, or when EtchDroid failed and you want to use your drive normally again.
+Some Android versions might also show notifications saying that the USB drive is
+unsupported or that it has issues. This is normal and you can safely ignore it.
 
-Note that there is no need to performe these operations if EtchDroid failed and you want to try again. Just restart the app and make sure you unplug and replug the USB drive to avoid any gotchas.
+Once you're done using the USB drive, you can format it with a regular filesystem
+and it will work again.
 
-# Scary notifications
-<div style="text-align: center;">
-<img style="max-width: 250px; width: auto;" src="/assets/img/broken_usb_1.png" alt="Unsupported USB drive"> <img style="max-width: 250px; width: auto;" src="/assets/img/broken_usb_2.png" alt="Issues with USB drive">
-</div>
+## How to format the USB drive after you're done using it
 
-If you just flashed your USB drive and you see one of the notifications above, your USB drive **IS NOT BROKEN**.
+Once you're done with the image you've written you may want to format it with a
+regular file system. This will allow you to use the USB drive to store regular
+files once again.
 
-It is extremely unlikely that EtchDroid broke your USB drive. If Android shows this, it's fine. If Windows doesn't seem to recognize it any more, that's okay too, that's how Windows works. It's a bit stupid but that's just how it works.
-
-## What does that message actually mean
-
-Most images you'll want to flash with EtchDroid will have a somewhat *weird* format. For example, take an Ubuntu image: that image is specifically made to boot both from a USB drive and a DVD.
-
-This means that the resulting USB drive's file system will be marked as read-only.
-
-Android complains about it because it expects a writable file system. Not finding any, one of these errors will show up telling you how to format it.
-
-Simply unplug the USB drive and plug it into a computer. If the image you provided is valid and EtchDroid was able to write it, it should work just fine.
-
-# How to format the USB drive
-
-Once you're done with the image you've written you may want to format it with a regular file system. This will allow you to use the USB drive to store regular files once again.
-
-## On Android
+### On Android
 
 New! Watch this YouTube video tutorial:
 
@@ -41,18 +28,18 @@ New! Watch this YouTube video tutorial:
 
 1. Close EtchDroid, plug your USB drive.
 1. Tap the "Unsupported USB Drive" or "Issues with USB drive" notification.
-    If it does not show up:
-    1. Open Settings
-    1. Find "Storage"
-    1. Tap the name of the USB drive
-    1. If the file explorer opens, tap the menu button, "Storage settings", "Format"
+   If it does not show up:
+   1. Open Settings
+   1. Find "Storage"
+   1. Tap the name of the USB drive
+   1. If the file explorer opens, tap the menu button, "Storage settings", "Format"
 1. Tap "Format USB drive"
 
 Remember to eject the USB drive from settings before unplugging it.
 
 ![Format USB drive (Android)](/assets/img/format_android.png){:width="300px"}
 
-## On Ubuntu
+### On Ubuntu
 
 New! Watch these video tutorials on how to do it with graphically and with the terminal:
 
@@ -68,7 +55,7 @@ If you have a different desktop environment and you cannot find the "Disks" app,
 1. If you see any volumes with a "play" icon on the bottom right, make sure you click on them and click "Stop"
 1. From the overflow menu on the upper right, select "Format Disk..."
 1. Use default settings, then confirm.
-    - The default is to use a MBR partition table. If you want to use GPT, you can select it now. But it won't make any difference for most users.
+   - The default is to use a MBR partition table. If you want to use GPT, you can select it now. But it won't make any difference for most users.
 1. Click on the new empty volume, it will say "Free space". Then click the "+" button
 1. Keep as is for the maximum size, then go on to the next page
 1. Enter a name for your USB drive, under type select "For use with all systems and device" (FAT32)
@@ -76,7 +63,7 @@ If you have a different desktop environment and you cannot find the "Disks" app,
 
 ![Format USB drive (Ubuntu)](/assets/img/format_linux.png){:width="100%"}
 
-## On Windows
+### On Windows
 
 Watch this video tutorial on how to format your USB drive on Windows:
 
@@ -90,12 +77,12 @@ If you don't feel comfortable doing it on Windows, I suggest you do it using And
 1. Right-click it and select "Run as administrator"
 1. Launch the command `diskpart`: type it and press Enter
 1. Type `list disk` to see the currently recognized disks
-    - Warning! Make sure you double and triple check so you don't erase the wrong drive!
+   - Warning! Make sure you double and triple check so you don't erase the wrong drive!
 1. Select the correct disk by typing `select disk #`
-    - For example, `select disk 1`
+   - For example, `select disk 1`
 1. Type `clean` to clean up the disk
 1. Type `convert mbr` or `convert gpt` to create a MBR/GPT partition table
-    - MBR is the most compatible, GPT has some new and cool features. However, it doesn't really matter, they both work.
+   - MBR is the most compatible, GPT has some new and cool features. However, it doesn't really matter, they both work.
 1. Type `exit` to close `diskpart`. Close the command prompt
 1. Open "File explorer"
 1. Right-click "This PC" and select "Manage"
@@ -104,10 +91,10 @@ If you don't feel comfortable doing it on Windows, I suggest you do it using And
 1. Right-click it and select "New Simple Volume..."
 1. Click Next, then Next again to keep the maximum size, then once again Next to assign a drive letter
 1. Under "Format this volume with the following settings", select FAT32 as "File system" for best compatibility
-    - You can type a disk name here
+   - You can type a disk name here
 1. Click Next and Finish, and you're done.
 
-## On macOS
+### On macOS
 
 Watch this tutorial on how to format a USB drive on macOS:
 

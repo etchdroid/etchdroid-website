@@ -1,0 +1,392 @@
+@import "normalize";
+@import "theme";
+@import "typography";
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-default;
+  margin: 0;
+  min-height: 100vh;
+  transition: 0.3s ease all;
+  display: flex;
+  flex-direction: column;
+
+  @include themed(true) {
+    background-color: t($bg);
+    color: t($fg);
+  }
+}
+
+h1 {
+  font-size: $font-size-h1;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: $font-size-h5;
+  font-weight: 500;
+}
+
+a {
+  @include themed {
+    color: t($primary);
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    @include themed {
+      color: t($primary);
+    }
+  }
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+  transition: 0.3s ease all;
+}
+
+@media (min-width: 650px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+header {
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+
+    a,
+    a:visited,
+    a:active,
+    a:focus,
+    a:hover {
+      @include themed {
+        color: t($fg);
+        text-decoration: none;
+      }
+    }
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 0.5rem;
+    }
+
+    .material-symbols-outlined {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+div.etchdroid-logo {
+  text-align: center;
+  padding: 150px 0;
+
+  $circle-diameter: 200px;
+  $icon-size: 140px;
+
+  @include dark-theme {
+    // Draw a 128px blur radius shadow with $icon-bg color
+    // The background should be transparent and let the shadow show through
+    background: radial-gradient(
+      circle at center,
+      rgba(t($icon-bg), 0.25) 0,
+      transparent $circle-diameter
+    );
+  }
+
+  // The image should be centered within the div
+  div {
+    display: inline-block;
+    width: $circle-diameter;
+    height: $circle-diameter;
+    border-radius: 50%;
+    transition: 0.3s ease all;
+
+    @include light-theme {
+      background-color: t($icon-bg);
+    }
+
+    img {
+      width: $icon-size;
+      height: $icon-size;
+      margin: $circle-diameter / 2 - $icon-size / 2;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.supported-green {
+  @include themed {
+    color: t($supported-green);
+  }
+}
+
+.partially-supported-yellow {
+  @include themed {
+    color: t($partially-supported-yellow);
+  }
+}
+
+.unsupported-red {
+  @include themed {
+    color: t($unsupported-red);
+  }
+}
+
+.support-status-icon.material-symbols-outlined {
+  font-size: 18px;
+  position: relative;
+  top: 3px;
+}
+
+.card {
+  border-radius: 5px;
+  padding: 1rem;
+
+  @include themed {
+    background-color: t($surface-variant);
+    color: t($on-surface-variant);
+  }
+}
+
+.crypto-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 20px 0;
+
+  .crypto-item {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    padding: 10px;
+    text-align: center;
+
+    .crypto-qr {
+      svg {
+        width: 180px;
+        height: 180px;
+        padding: 5px 0;
+
+        .qrcode {
+          @include themed {
+            fill: t($fg);
+          }
+        }
+      }
+    }
+
+    .crypto-address {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: normal;
+      align-items: normal;
+      align-content: normal;
+
+      * {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+      }
+
+      input {
+        flex-grow: 1;
+        border-radius: 5px 0 0 5px;
+        transition: 0.3s ease all;
+
+        @include themed {
+          background-color: t($bg);
+          color: t($fg);
+          border: 1px solid t($outline);
+        }
+
+        &:focus-visible {
+          @include themed {
+            outline: 2px solid t($primary);
+          }
+        }
+      }
+
+      button {
+        flex-grow: 0;
+        border-radius: 0 5px 5px 0;
+        transition: 0.3s ease all;
+
+        @include themed {
+          background-color: t($bg);
+          color: t($fg);
+          border: 1px solid t($outline);
+        }
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:focus-visible {
+          @include themed {
+            outline: 2px solid t($primary);
+            background-color: t($primary);
+            color: t($bg);
+          }
+        }
+
+        &:active {
+          @include themed {
+            background-color: lighten(t($primary), 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .spacer {
+    flex: 1;
+    padding: 10px;
+  }
+
+  // gradient footer
+  /* .actual-footer {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-top: 30px;
+
+    @include themed {
+      background: linear-gradient(
+        to top,
+        rgba(t($surface-variant), t($footer-opacity)),
+        rgba(t($surface-variant), 0) 100%
+      );
+    }
+  } */
+
+  .actual-footer {
+    text-align: center;
+    padding: 30px 0;
+
+    // Drop an inner shadow as if the footer was below the page
+    @include themed {
+      box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, t($shadow-opacity));
+    }
+
+    @include themed {
+      background-color: t($surface-variant);
+      color: t($on-surface-variant);
+
+      a,
+      a:visited,
+      a:active,
+      a:focus,
+      a:hover {
+        color: t($on-surface-variant);
+      }
+    }
+  }
+}
+
+.store-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 20px 0;
+
+  .store-link {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    padding: 10px;
+    text-align: center;
+
+    img {
+      max-height: 53px;
+    }
+  }
+}
+
+.featured-reviews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  padding-bottom: 20px;
+
+  .featured-review {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    font-style: italic;
+
+    width: 150px;
+    margin: 5px;
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+
+    p {
+      margin: 0;
+
+      &:first-child {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

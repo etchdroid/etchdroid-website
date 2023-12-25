@@ -1,0 +1,33 @@
+<script type="text/javascript">
+  const getPreferredTheme = () => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      return "dark";
+    } else {
+      return "light";
+    }
+  };
+
+  const toggleTheme = () => {
+    const currentTheme = document.body.classList.contains("theme--dark")
+      ? "dark"
+      : "light";
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    document.body.classList.remove(`theme--${currentTheme}`);
+    document.body.classList.add(`theme--${newTheme}`);
+    localStorage.setItem("theme", newTheme);
+  };
+
+  const applyTheme = () => {
+    const storedTheme = localStorage.getItem("theme");
+    const preferredTheme = getPreferredTheme();
+
+    const themeToApply = storedTheme || preferredTheme;
+    document.body.classList.add(`theme--${themeToApply}`);
+  };
+
+  applyTheme();
+</script>

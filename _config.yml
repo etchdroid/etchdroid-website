@@ -1,26 +1,75 @@
 title: EtchDroid
-
-description: >
-    An application to write OS images to USB drives, on Android, no root required.
-
+description: "EtchDroid is an open-source application that helps you write images to USB drives."
+url: "https://etchdroid.depau.eu"
 lang: en
 
-url: "https://etchdroid.depau.eu"
+github: "https://github.com/EtchDroid/EtchDroid"
 
 author:
-    name: Davide Depau
-    email: etchdroid@depau.eu
-    site: http://depau.eu
+  name: Davide Depau
+  email: davide@depau.eu
+  site: http://depau.eu
 
-github_username: "Depau"
-
-excerpt_separator: <!--more-->
-
-exclude: ['Gemfile', 'Gemfile.lock', 'LICENSE', 'README.md']
-
-permalink: pretty
+exclude:
+  - LICENSE
+  - README.md
 
 gems:
-    - jekyll-sitemap
+  - jekyll-sitemap
 
-image: "/assets/img/icon.png"
+sass:
+  #   style: compressed
+  sass_dir: _sass
+
+permalink: pretty
+markdown: kramdown
+
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: "highlight"
+
+nav:
+  - name: "Donate"
+    link: "/donate/"
+  - name: "FAQ"
+    link: "/faq/"
+  - name: "About me"
+    link: "https://depau.eu"
+
+crypto_addresses:
+  - name: "Monero"
+    qrcode: "crypto/xmr.svg"
+    address: "43NaoYSbe7uc38wUzk7STjGaRHmEZ4tU6JpoHUyPFMt7f5imWBvwUdc3zX8tABu97bSpYVJGZGNynTizF5RcZBkSCSc6bxx"
+  - name: "Ethereum"
+    qrcode: "crypto/ethereum.svg"
+    address: "0xA73B14B04fE91A64a53Ca2496a1d73120167be66"
+  - name: "Tether USDT ERC20"
+    qrcode: "crypto/usdt-eth-erc20.svg"
+    address: "0xA73B14B04fE91A64a53Ca2496a1d73120167be66"
+  - name: "Solana"
+    qrcode: "crypto/solana.svg"
+    address: "2gWqNzcbffuwjXHM446HEc6r7YfbNmYBszitr1Lk2C25"
+  - name: "Bitcoin"
+    qrcode: "crypto/bitcoin.svg"
+    address: "14cohpu94QLeenZsL5R3PWPV4dw1qXtHzr"
+
+store_links:
+  - name: "Google Play"
+    link: "https://play.google.com/store/apps/details?id=eu.depau.etchdroid"
+    button: "/assets/img/get_on_googleplay.svg"
+  - name: "GitHub"
+    link: "https://github.com/EtchDroid/EtchDroid/releases"
+    button: "/assets/img/get_on_github.svg"
+  - name: "F-Droid"
+    link: "https://f-droid.org/packages/eu.depau.etchdroid/"
+    button: "/assets/img/get_on_fdroid.svg"
+
+featured_reviews:
+  - "FOSS, 0$, does exactly what is says on the tin. What more do you want?"
+  - "It saved me many times. Thank you for making this."
+  - '"In the times of greater need it did the good deeds"'

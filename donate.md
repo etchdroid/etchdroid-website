@@ -1,33 +1,52 @@
 ---
 title: Donate
 permalink: /donate/
-layout: page
+layout: default
 ---
 
-# Subscriptions
+Writing and testing this app takes an incredible amount of time and effort. If
+the app has been helpful, please consider showing your support through a
+donation.
 
-You can actively support the development with a monthly subscription on Patreon or Flattr.
+<div class="card">
+<strong>Please note:</strong> While every contribution is deeply appreciated, donations don't
+equate to special treatment or support. EtchDroid is a hobby project, and I
+dedicate time to it as my schedule allows. I welcome suggestions and bug reports
+from all users, donor or not.
+</div>
 
-<p align="center">
-<a href="https://www.patreon.com/depau" rel="_noopener" target="_blank"><img alt="Become a Patron" src="/assets/img/become_a_patron_button.png"/></a> &nbsp;&nbsp;&nbsp; <a href="https://flattr.com/@Depau" rel="_noopener" target="_blank"><img alt="Flattr this" src="https://api.flattr.com/button/flattr-badge-large.png"/></a>
-</p>
+For customized versions of EtchDroid tailored to your company's branding or
+other specific needs (including relicensing), I may be open to freelance
+opportunities. Reach out at
+[{{ site.author.email }}](mailto:{{ site.author.email }}) to discuss further.
 
-Supporters who subscribe for $10 or more can ask me to **get listed in the app's
-about page** and in the GitHub README.md.
+### Recurring
 
-# One-time
+- Become a patron on <a href="https://www.patreon.com/depau" target="_blank" rel="noopener">Patreon</a>
+- Become a sponsor on <a href="https://github.com/sponsors/depau" target="_blank" rel="noopener">GitHub Sponsors</a>
 
-You can buy me a coffee on PayPal or Monero.
+### One-time
 
-### PayPal
+- Buy me a sandwich with <a href="https://paypal.me/DavideDepau" target="_blank" rel="noopener">PayPal</a>
 
-[https://paypal.me/DavideDepau](https://paypal.me/DavideDepau)
+### Cryptocurrencies
 
-# Bug bounties
+If you'd rather donate in cryptocurrency, below are my addresses.
 
-Want a new feature or an annoying bug fixed? Post a bounty on it!
+<div class="card">
+<strong>Note:</strong> only send Ethereum ERC-20 tokens to the Tether address.
+If you'd like to use a different blockchain, please send me an email.
+</div>
 
-Whoever first closes the issue will get the bounty. [See the issues](https://github.com/Depau/EtchDroid/issues).
-
-To post a bounty, simply click the "Post a bounty" link under the issue description.
-If you just created the issue and the link doesn't show up, wait a few minutes so the bounty bot can detect it.
+<div class="crypto-box">
+{% for entry in site.crypto_addresses %}
+<div class="crypto-item">
+    <div class="crypto-name">{{ entry.name }}</div>
+    <div class="crypto-qr">{% include {{ entry.qrcode }} %}</div>
+    <div class="crypto-address">
+        <input type="text" class="monospace" value="{{ entry.address }}" readonly size="1">
+        <button class="copy-button" data-clipboard-text="{{ entry.address }}" title="Copy address"><span class="material-symbols-outlined">content_copy</span></button>
+    </div>
+</div>
+{% endfor %}
+</div>

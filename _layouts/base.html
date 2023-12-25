@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html{% if site.lang %} lang="{{ site.lang }}"{% endif %}>
+
+{% include head.html %}
+
+<body>
+    {% include header_scripts.html %}
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+    {% include footer_scripts.html %}
+</body>
+</html>
