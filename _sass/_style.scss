@@ -374,8 +374,27 @@ footer {
     order: 0;
     font-style: italic;
 
-    width: 150px;
+    width: 120px;
     margin: 5px;
+
+    @media screen and (max-width: 359px) {
+      & {
+        width: 100%;
+      }
+    }
+    
+    @media screen and (min-width: 400px) {
+      & {
+        width: 130px;
+      }
+    }
+
+    @media screen and (min-width: 500px) {
+      & {
+        width: 150px;
+      }
+    }
+
 
     .material-symbols-outlined {
       font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
