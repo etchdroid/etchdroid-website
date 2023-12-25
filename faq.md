@@ -31,6 +31,16 @@ There's a [separate page]({{ site.baseurl }}/broken_usb/) with further
 explanations and instructions on how to format the USB drive once you're done
 using it.
 
+### Why can't I use the internal SD card slot?
+
+Unfortunately, Android does not allow apps to write to the internal SD card
+slot in the way that is required in order to write disk images.
+
+Only USB devices can ever be supported.
+
+Other apps might be able to get around this limitation by using root access;
+EtchDroid does not require root and will never do so.
+
 ### My issue is not listed here
 
 You can <a href="{{ site.github }}/discussions" target="_blank" rel="noopener">ask the community on GitHub</a>.
