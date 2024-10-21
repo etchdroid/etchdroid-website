@@ -72,11 +72,9 @@ We collect the following information:
 - **Performance Information**: App startup times and performance events.
 - **Usage Information**: Which buttons are pressed and which screens are displayed within the App.
 - **Image File Names and Sizes**: File names and sizes of the disk images you open for writing.
-
   > **Note**: File names can sometimes contain personal data. We collect file names to help us
   troubleshoot issues with specific disk images. If you are concerned about this, you can opt out of
   telemetry in the App's settings.
-
 - **USB Device Information**:
     - Device name.
     - Device vendor and product ID.
@@ -125,10 +123,8 @@ deleted, please follow these steps:
 1. **Contact Us**: Send an email to **[privacy@etchdroid.app](mailto:privacy@etchdroid.app)** with
    the subject line "Data
    Deletion Request - EtchDroid".
-
 2. **Provide Necessary Details**: Include the exact image file name you opened in EtchDroid. This
    will help us locate and delete any related data.
-
 3. **Verification**: We may need to verify your identity to protect your privacy and security.
 
 We will process your request within 30 days, in accordance with GDPR regulations.
