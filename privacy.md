@@ -16,6 +16,9 @@ This Privacy Policy has been written to comply with
 the [Google Play policies](https://support.google.com/googleplay/android-developer/answer/113469#privacy)
 and the European Union General Data Protection Regulation (GDPR).
 
+**This privacy policy applies to EtchDroid version 1.9.rc5+25 or newer. Older versions do not include
+telemetry data collection.**
+
 ## In short
 
 - **F-Droid Users**: When you download EtchDroid from F-Droid, no analytics, telemetry, tracking, or
