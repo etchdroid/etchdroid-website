@@ -104,22 +104,49 @@ data processing does not override your rights and freedoms.
 
 ## Your Rights Under GDPR
 
-If you are located in the European Union, you have the following rights regarding your personal
-data:
+As a user in the European Union, you have certain rights regarding your personal data under the
+General Data Protection Regulation (GDPR). These rights include:
 
-- **Right of Access**: You can request access to the personal data we hold about you.
-- **Right to Rectification**: You can request that we correct any inaccurate or incomplete personal
+- **Right of Access**: You can request information about the personal data we hold about you.
+- **Right to Rectification**: You can request correction of any inaccurate or incomplete personal
   data.
-- **Right to Erasure**: You can request that we delete your personal data.
-- **Right to Restrict Processing**: You can request that we restrict the processing of your personal
+- **Right to Erasure**: You can request deletion of your personal data under certain circumstances.
+- **Right to Restrict Processing**: You can request that we limit the processing of your personal
   data.
-- **Right to Data Portability**: You can request a copy of your personal data in a structured,
-  commonly used, and machine-readable format.
-- **Right to Object**: You can object to the processing of your personal data based on our
-  legitimate interests.
+- **Right to Object**: You can object to the processing of your personal data.
 
-To exercise any of these rights, please contact us
-at [privacy@etchdroid.app](mailto:privacy@etchdroid.app).
+### How to Request Data Deletion
+
+Since EtchDroid collects minimal personal data and most of it is anonymized, we may not be able to
+identify your data without specific information from you. If you believe that your personal data
+(specifically an image file name that is not commonly used) has been collected and wish to have it
+deleted, please follow these steps:
+
+1. **Contact Us**: Send an email to **[privacy@etchdroid.app](mailto:privacy@etchdroid.app)** with
+   the subject line "Data
+   Deletion Request - EtchDroid".
+
+2. **Provide Necessary Details**: Include the exact image file name you opened in EtchDroid. This
+   will help us locate and delete any related data.
+
+3. **Verification**: We may need to verify your identity to protect your privacy and security.
+
+We will process your request within 30 days, in accordance with GDPR regulations.
+
+Note that the retention period for collected data is 90 days; after this period, all data is
+automatically deleted.
+
+### Data Retention
+
+- **Data Deleted**: Specific image file names you provide for deletion.
+- **Data Retained**: Anonymized telemetry data that cannot be linked back to you.
+- **Retention Period**: All collected data is stored for up to 90 days before automatic deletion.
+
+If you have any questions or concerns about your data, please contact us at *
+*[privacy@etchdroid.app](mailto:privacy@etchdroid.app)**.
+
+*EtchDroid is committed to protecting your privacy and ensuring transparency about how your data is
+handled.*
 
 ## Opt-Out of Data Collection
 
