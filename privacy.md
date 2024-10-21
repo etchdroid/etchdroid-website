@@ -16,6 +16,16 @@ This Privacy Policy has been written to comply with
 the [Google Play policies](https://support.google.com/googleplay/android-developer/answer/113469#privacy)
 and the European Union General Data Protection Regulation (GDPR).
 
+## In short
+
+- **F-Droid Users**: When you download EtchDroid from F-Droid, no analytics, telemetry, tracking, or
+  ads are included.
+
+- **Other Sources (Google Play, GitHub releases, etc.)**: When downloaded from other sources,
+  EtchDroid collects non-personally identifying telemetry data to help identify and fix issues.
+
+Please read the detailed sections below for more information.
+
 ## Data Controller and Contact Information
 
 The data controller responsible for your personal data is:
