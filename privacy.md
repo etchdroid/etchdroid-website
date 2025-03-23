@@ -1,12 +1,6 @@
----
-title: Privacy Policy
-permalink: /privacy/
-layout: default
----
-
 # Privacy Policy
 
-**Last Updated**: *October 21, 2024*
+**Last Updated**: *March 23, 2025*
 
 This Privacy Policy describes how EtchDroid ("we", "us", or "our") collects, uses, and discloses
 your personal data when you use our application ("EtchDroid" or "the App"). We are committed to
@@ -16,8 +10,8 @@ This Privacy Policy has been written to comply with
 the [Google Play policies](https://support.google.com/googleplay/android-developer/answer/113469#privacy)
 and the European Union General Data Protection Regulation (GDPR).
 
-**This privacy policy applies to EtchDroid version 1.9.rc5+25 or newer. Older versions do not include
-telemetry data collection.**
+**This privacy policy applies to EtchDroid version 1.9.rc5+25 or newer. Older versions do not
+include telemetry data collection.**
 
 ## In short
 
@@ -26,6 +20,10 @@ telemetry data collection.**
 
 - **Other Sources (Google Play, GitHub releases, etc.)**: When downloaded from other sources,
   EtchDroid collects non-personally identifying telemetry data to help identify and fix issues.
+
+- **Crash and Performance Reporting**: We use both [Sentry](https://sentry.io/)
+  and [Firebase Crashlytics](https://firebase.google.com/products/crashlytics) for crash reporting
+  and performance metrics. You can opt out of data collection if you wish.
 
 Please read the detailed sections below for more information.
 
@@ -62,8 +60,8 @@ stability.
 
 If you downloaded EtchDroid from Google Play, GitHub releases, or any other source:
 
-- **Data Collection**: EtchDroid uses the [Sentry](https://sentry.io/) telemetry service to help us
-  identify stability issues and crashes.
+- **Data Collection**: EtchDroid uses **Sentry** and **Firebase Crashlytics** telemetry services to
+  help us identify stability issues and crashes.
 - **Opt-Out Mechanism**: Telemetry is enabled by default based on our legitimate interest to improve
   the App. You can opt out of data collection at any time in the App's settings.
 
@@ -86,8 +84,9 @@ We collect the following information:
   the system file manager) are not captured. (Note that the App does not display any personally
   identifying information; screenshots are used for troubleshooting graphical issues.)
 - **App Status Information**: Internal status of the App, such as ongoing jobs and their status.
-- **Error Reports**: Any errors the App generates due to bugs or external issues such as
-  disconnections or hardware problems.
+- **Error and Crash Reports**: Any errors the App generates due to bugs or external issues such as
+  disconnections or hardware problems. These crashes may be logged via Sentry or Firebase
+  Crashlytics.
 
 ## Why Does EtchDroid Collect This Data?
 
@@ -124,8 +123,7 @@ identify your data without specific information from you. If you believe that yo
 deleted, please follow these steps:
 
 1. **Contact Us**: Send an email to **[privacy@etchdroid.app](mailto:privacy@etchdroid.app)** with
-   the subject line "Data
-   Deletion Request - EtchDroid".
+   the subject line "Data Deletion Request - EtchDroid".
 2. **Provide Necessary Details**: Include the exact image file name you opened in EtchDroid. This
    will help us locate and delete any related data.
 3. **Verification**: We may need to verify your identity to protect your privacy and security.
@@ -141,8 +139,8 @@ automatically deleted.
 - **Data Retained**: Anonymized telemetry data that cannot be linked back to you.
 - **Retention Period**: All collected data is stored for up to 90 days before automatic deletion.
 
-If you have any questions or concerns about your data, please contact us at *
-*[privacy@etchdroid.app](mailto:privacy@etchdroid.app)**.
+If you have any questions or concerns about your data, please contact us at
+**[privacy@etchdroid.app](mailto:privacy@etchdroid.app)**.
 
 *EtchDroid is committed to protecting your privacy and ensuring transparency about how your data is
 handled.*
@@ -161,12 +159,6 @@ When telemetry is disabled, the App will no longer collect any data about your d
 We retain the collected data for up to **90 days**, after which it is automatically deleted. This
 retention period allows us to analyze issues and improve the App's stability.
 
-## Data Transfers
-
-We store and process your data within the European Union. We use Sentry, which processes and stores
-data within the EU, ensuring compliance with GDPR. If any data is transferred outside the EU, we
-ensure that appropriate safeguards are in place, such as Standard Contractual Clauses.
-
 ## Data Security
 
 We implement industry-standard security measures to protect your data from unauthorized access or
@@ -174,13 +166,26 @@ disclosure. This includes encryption in transit and at rest.
 
 ## Use of Data Processors
 
-We use Sentry as a data processor to collect and process data on our behalf. We have a Data
-Processing Agreement (DPA) with Sentry, ensuring that they comply with GDPR and protect your
-personal data.
+We use two primary data processors for telemetry:
 
-For more information about Sentry's privacy practices, please visit
-their [Privacy Policy](https://sentry.io/privacy/)
-and [Data Processing Agreement](https://sentry.io/legal/dpa/).
+### 1. **Sentry** (for crash and performance reporting)
+
+- See [Sentry's Privacy Policy](https://sentry.io/privacy/)
+  and [Data Processing Agreement](https://sentry.io/legal/dpa/)
+  for details.
+- We have a Data Processing Agreement (DPA) with Sentry.
+
+### 2. **Firebase Crashlytics** (provided by Google)
+
+- See [Firebase Crashlytics Terms](https://firebase.google.com/terms)
+  and [Firebase Data Processing and Security Terms](https://firebase.google.com/terms/data-processing-terms).
+- **No separate DPA**: We have not signed a specific Data Processing Agreement with Google for
+  Firebase Crashlytics. Your data is therefore subject to the standard Firebase data processing
+  terms.
+
+By using the App from Google Play, GitHub releases, or other sources (where telemetry is included),
+you acknowledge and agree that crash reports and related data may be sent to both Sentry and
+Firebase Crashlytics. If you do not agree, you may opt out of telemetry.
 
 ## No Automated Decision-Making
 
@@ -203,3 +208,8 @@ If you have any questions or concerns about this Privacy Policy or our data prac
 contact us at:
 
 Email: [privacy@etchdroid.app](mailto:privacy@etchdroid.app)
+
+### Change log
+
+- October 21, 2024: Initial version.
+- March 23, 2025: Added details about our use of Firebase Crashlytics for telemetry.
