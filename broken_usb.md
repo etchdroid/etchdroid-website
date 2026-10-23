@@ -26,7 +26,7 @@ New! Watch this YouTube video tutorial:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VBSXz9LfCbw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-1. Close EtchDroid, plug your USB drive.
+1. Close EtchDroid, plug in your USB drive.
 1. Tap the "Unsupported USB Drive" or "Issues with USB drive" notification.
    If it does not show up:
    1. Open Settings
@@ -41,7 +41,7 @@ Remember to eject the USB drive from settings before unplugging it.
 
 ### On Ubuntu
 
-New! Watch these video tutorials on how to do it with graphically and with the terminal:
+New! Watch these video tutorials on how to do it graphically and with the terminal:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/a5MCVQ6GW8I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rwHSqTMB96k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
