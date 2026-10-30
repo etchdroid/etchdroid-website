@@ -53,6 +53,8 @@ No root required, no ads, no tracking, no nonsense.
 - {% include partially-supported.html %} Community-built Windows images, made for EtchDroid (be careful: they may contain viruses!)
 - {% include partially-supported.html %} Older GNU/Linux OS images < 2010 such as Damn Small Linux and Puppy Linux
 
+<div class="gplay-hidden" markdown="1">
+
 ### Support the project
 
 Writing and testing this app takes an incredible amount of time and effort. If
@@ -61,6 +63,8 @@ EtchDroid saved your day, please consider donating.
 - Become a patron on <a href="https://www.patreon.com/depau" target="_blank" rel="noopener">Patreon</a>
 - Become a sponsor on <a href="https://github.com/sponsors/depau" target="_blank" rel="noopener">GitHub Sponsors</a>
 - More options in the <a href="{{ site.baseurl }}/donate/">donations page</a>
+
+</div>
 
 ### Contributing to EtchDroid
 

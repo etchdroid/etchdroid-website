@@ -36,10 +36,12 @@ kramdown:
 nav:
   - name: "Donate"
     link: "/donate/"
+    gplay_hidden: true
   - name: "FAQ"
     link: "/faq/"
   - name: "About me"
     link: "https://depau.eu"
+    gplay_hidden: true
 
 crypto_addresses:
   - name: "Monero"

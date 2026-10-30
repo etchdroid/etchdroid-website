@@ -3,7 +3,7 @@
   <nav>
     <ul>
       {% for entry in site.nav %}
-      <li><a href="{{ entry.link }}">{{ entry.name }}</a></li>
+      <li{% if entry.gplay_hidden %} class="gplay-hidden"{% endif %}><a href="{{ entry.link }}">{{ entry.name }}</a></li>
       {% endfor %}
       <li class="opendyslexic"><a href="#" id="opendyslexic-toggle" title="Toggle the dyslexic-friendly font">Dyslexic?</a></li>
       <li><a href="#" onclick="toggleTheme()"><span class="material-symbols-outlined">dark_mode</span></a></li>

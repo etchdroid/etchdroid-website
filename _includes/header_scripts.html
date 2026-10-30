@@ -30,4 +30,19 @@
   };
 
   applyTheme();
+
+  // Opened from the Google Play build of the app: hide donation links and keep
+  // the flag on every link to this site, so they stay hidden while browsing.
+  if (new URLSearchParams(location.search).has("gplay")) {
+    document.documentElement.classList.add("gplay");
+    document.addEventListener("DOMContentLoaded", () => {
+      for (const a of document.querySelectorAll("a[href]")) {
+        if (a.getAttribute("href").startsWith("#")) continue;
+        const url = new URL(a.href, location.href);
+        if (url.origin !== location.origin) continue;
+        url.searchParams.set("gplay", "1");
+        a.href = url.href;
+      }
+    });
+  }
 </script>

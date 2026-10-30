@@ -409,3 +409,8 @@ footer {
     }
   }
 }
+
+// Google Play forbids in-app links to pages that lead to donations
+.gplay .gplay-hidden {
+  display: none !important;
+}
