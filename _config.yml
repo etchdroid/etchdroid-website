@@ -44,6 +44,9 @@ nav:
     gplay_hidden: true
 
 crypto_addresses:
+  - name: "Monero"
+    qrcode: "crypto/xmr.svg"
+    address: "43NaoYSbe7uc38wUzk7STjGaRHmEZ4tU6JpoHUyPFMt7f5imWBvwUdc3zX8tABu97bSpYVJGZGNynTizF5RcZBkSCSc6bxx"
   - name: "Ethereum"
     qrcode: "crypto/ethereum.svg"
     address: "0xA73B14B04fE91A64a53Ca2496a1d73120167be66"
